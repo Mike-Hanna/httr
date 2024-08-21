@@ -55,7 +55,7 @@ compact <- function(x) {
 
 is_empty <- function(x) length(x) == 0
 
-keep_last <- function(...) {
+  keep_last <- function(...) {
   x <- c(...)
   x[!duplicated(names(x), fromLast = TRUE)]
 }
@@ -66,11 +66,6 @@ named_vector <- function(title, x) {
   cat(title, ":\n", sep = "")
   bullets <- paste0("* ", names(x), ": ", as.character(x))
   cat(bullets, sep = "\n")
-}
-
-keep_last <- function(...) {
-  x <- c(...)
-  x[!duplicated(names(x), fromLast = TRUE)]
 }
 
 find_cert_bundle <- function() {
