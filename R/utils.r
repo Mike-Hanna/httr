@@ -55,7 +55,7 @@ compact <- function(x) {
 
 is_empty <- function(x) length(x) == 0
 
-  keep_last <- function(...) {
+keep_last <- function(...) {
   x <- c(...)
   x[!duplicated(names(x), fromLast = TRUE)]
 }
